@@ -5,7 +5,7 @@
  *
  * \copyright 2017 Velo Payments, Inc.  All rights reserved.
  */
-#include "config.h"
+#include <cbmc/model_assert.h>
 
 /* Enable this compilation unit only under CBMC. */
 #ifdef CBMC

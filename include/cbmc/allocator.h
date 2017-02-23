@@ -10,6 +10,7 @@
 #define CBMC_ALLOCATOR_HEADER_GUARD
 
 #include <stdint.h>
+#include <stdlib.h>
 
 #ifdef __cplusplus
 extern "C" {
