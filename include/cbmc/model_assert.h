@@ -14,11 +14,13 @@
 #include <cbmc/allocator.h>
 
 /* Configuration options for the model checker. */
-#ifdef CBMC
+#if CBMC
 #define MODEL_ASSERT(x) assert((x))
 #define MODEL_ASSUME(x) __CPROVER_assume((x))
+#ifndef CBMC_NO_MALLOC_OVERRIDE
 #define malloc cbmc_malloc
 #define free cbmc_free
+#endif /* CBMC_NO_MALLOC_OVERRIDE */
 #else
 #define MODEL_ASSERT(x)
 #define MODEL_ASSUME(x)
