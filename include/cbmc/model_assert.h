@@ -15,7 +15,7 @@
 
 /* Configuration options for the model checker. */
 #if CBMC
-#define MODEL_ASSERT(x) assert((x))
+#define MODEL_ASSERT(x) __CPROVER_assert((x), #x)
 #define MODEL_ASSUME(x) __CPROVER_assume((x))
 #define MODEL_EXEMPT(x)
 #ifndef CBMC_NO_MALLOC_OVERRIDE
